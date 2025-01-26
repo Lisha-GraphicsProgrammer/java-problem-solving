@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class helloo{
+public static void main(String[] args){
+Scanner lisha=new Scanner(System.in);
+int n1=lisha.nextInt();
+int n2=lisha.nextInt();
+String result=(n1>n2)?"greatern1":"greater n2";                 //ternary syntax 
+{
+System.out.println(result);
+}
+}
+}
