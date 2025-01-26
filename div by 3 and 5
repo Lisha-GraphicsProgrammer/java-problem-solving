@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class helloo{
+public static void main(String[] args){
+Scanner lisha=new Scanner(System.in);
+System.out.println("enter number");
+int n=lisha.nextInt();
+
+if(n%3==0 && n%5==0){
+System.out.println("the number divisible by both 3 and 5");
+}
+else{
+System.out.println("not divisible");
+}
+}
+}
