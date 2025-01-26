@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class helloo{
+public static void main(String[] args){
+Scanner lisha=new Scanner(System.in);
+int salary=lisha.nextInt();
+int age=lisha.nextInt();
+if(salary>=20000 || age<=25)                          // i have fixed this condition
+{
+System.out.println("you r eligible");
+
+int loan=lisha.nextInt();                                //input for the loan amount
+if(loan<=50000){
+System.out.println("you r eligible");
+}
+else{
+System.out.println("maximum load amt 50000");                      //if above 50000 maximum amount reached so......
+}
+}
+else{
+System.out.println("not eligible");
+}
+}
+}
