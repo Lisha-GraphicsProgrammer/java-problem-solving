@@ -1,0 +1,17 @@
+public class SubstringDemo {
+    public static void main(String[] args) {
+        String name = "Johnathan Doe";
+
+        // Extract substring starting from index 0 to 8
+        String part1 = name.substring(0, 8);
+        System.out.println("Substring (0 to 8): " + part1); // Output: Johnatha
+
+        // Extract substring starting from index 9 to the end of the string
+        String part2 = name.substring(9);
+        System.out.println("Substring (9 to end): " + part2); // Output: Doe
+
+        // Extract the first 4 characters
+        String part3 = name.substring(0, 4);
+        System.out.println("First 4 characters: " + part3); // Output: John
+    }
+}
