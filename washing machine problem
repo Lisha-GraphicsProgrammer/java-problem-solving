@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class washingmachine{
+public static void main(String args[]){
+Scanner lisha=new Scanner(System.in);
+System.out.println("enter the weight of cloths");
+int weight=lisha.nextInt();
+System.out.println("enter the leval(l/m/h)");
+char waterleval=lisha.next().toUpperCase().charAt(0);
+if(weight<0){
+System.out.println("invalid input");
+}
+else if(weight==0){
+System.out.println("time estimated:0minutes");
+}
+else if(weight>7000){
+System.out.println("overloaded");
+}
+else{
+int time=0;
+switch(waterleval){
+case'l':
+if(weight>2000 && weight <=4000)time=35;
+break;
+case'h':
+if(weight>4000 && weight<=7000)time=45;
+break;
+case'l':
+if(weight<=2000)time=25;
+break;
+default:
+System.out.println("invalid input");
+return;
+if(time>0){
+System.out.println("time estimated"+time+'"minutes");
+}
+else{
+System.out.println("invalid input");
+}
