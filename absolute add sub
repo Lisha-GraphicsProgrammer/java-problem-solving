@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class AbsoluteAdditionSubtraction {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter the first number: ");
+        int num1 = sc.nextInt();
+        
+        System.out.print("Enter the second number: ");
+        int num2 = sc.nextInt();
+        
+        // Addition
+        int addition = Math.abs(num1 + num2);
+        System.out.println("Addition of 2 values: " + num1 + " + " + num2 + " = " + addition);
+        
+        // Subtraction
+        int subtraction = Math.abs(num1 - num2);
+        System.out.println("Subtraction of 2 values: " + num1 + " - " + num2 + " = " + subtraction);
+        
+        sc.close();
+    }
+}
