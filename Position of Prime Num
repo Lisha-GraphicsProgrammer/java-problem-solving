@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class PrimePosition {
+    
+    // Function to check if a number is prime
+    public static boolean isPrime(int num) {
+        if (num < 2) return false;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+
+    // Function to find the position of a prime number
+    public static int findPrimePosition(int n) {
+        int count = 0, num = 2; // Start from the first prime (2)
+        
+        while (true) {
+            if (isPrime(num)) {
+                count++; // Increment prime count
+                if (num == n) return count; // If number matches, return position
+            }
+            num++; // Check next number
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a prime number: ");
+        int primeNumber = scanner.nextInt();
+        
+        if (!isPrime(primeNumber)) {
+            System.out.println(primeNumber + " is not a prime number.");
+        } else {
+            int position = findPrimePosition(primeNumber);
+            System.out.println(primeNumber + " is the " + position + "th prime number.");
+        }
+        
+        scanner.close();
+    }
+}
