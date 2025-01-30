@@ -1,0 +1,21 @@
+public class PerfectNumber {
+    public static boolean checkPerfectNumber(int num) {
+        if (num <= 1) return false; // 1 and negative numbers cannot be perfect
+
+        int sum = 1; // 1 is always a divisor
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                sum += i;
+                if (i != num / i) { // Avoid adding sqrt(num) twice if it's a perfect square
+                    sum += num / i;
+                }
+            }
+        }
+        return sum == num;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(checkPerfectNumber(28)); // true
+        System.out.println(checkPerfectNumber(7));  // false
+    }
+}
