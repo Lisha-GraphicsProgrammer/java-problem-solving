@@ -1,0 +1,18 @@
+public class FlagExample {
+public static void main(String[] args) {
+boolean found = false;
+for (int i = 1; i <= 10; i++) {
+if (i == 7) {
+found = true;
+break; // Exit loop when i is 7
+   }
+   System.out.println("i = " + i);
+        }
+        
+   if (found) {
+System.out.println("Number 7 was found, stopping loop.");
+        } else {
+System.out.println("Number 7 was not found.");
+        }
+    }
+}
