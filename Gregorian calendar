@@ -27,8 +27,8 @@ public class DayOfYear {
     }
 
     public static void main(String[] args) {
-        System.out.println(dayOfYear("2019-01-09")); // Output: 9
-        System.out.println(dayOfYear("2019-02-10")); // Output: 41
-        System.out.println(dayOfYear("2020-03-01")); // Output: 61 (leap year)
+        System.out.println(dayOfYear("2019-01-09")); 
+        System.out.println(dayOfYear("2019-02-10")); 
+        System.out.println(dayOfYear("2020-03-01")); // (leap year)
     }
 }
