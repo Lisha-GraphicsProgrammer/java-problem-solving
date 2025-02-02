@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class RightAlignedDiamond {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows for half pattern: ");
+        int n = scanner.nextInt();  // Take user input for the number of rows
+        scanner.close();
+
+        int i = 1; // Row counter for upper part
+        // Upper Pyramid (including the middle row)
+        while (i <= n) {
+            int spaces = n - i; // Calculate leading spaces
+            int j = 1;
+            while (j <= spaces) {
+                System.out.print(" ");
+                j++;
+            }
+            int k = 1;
+            while (k <= 2 * i - 1) { // Print stars
+                System.out.print("*");
+                k++;
+            }
+            System.out.println();
+            i++;
+        }
+
+        i = n - 1; // Reset row counter for lower part
+        // Lower Inverted Pyramid
+        while (i >= 1) {
+            int spaces = n - i; // Calculate leading spaces
+            int j = 1;
+            while (j <= spaces) {
+                System.out.print(" ");
+                j++;
+            }
+            int k = 1;
+            while (k <= 2 * i - 1) { // Print stars
+                System.out.print("*");
+                k++;
+            }
+            System.out.println();
+            i--;
+        }
+    }
+}
